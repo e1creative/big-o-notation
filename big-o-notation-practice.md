@@ -2,16 +2,16 @@
 
 Simplify the following big O expressions as much as possible:
 
-O(n + 10)
-O(100 _ n)
-O(25)
-O(n^2 + n^3)
-O(n + n + n + n)
-O(1000 _ log(n) + n)
-O(1000 _ n _ log(n) + n)
-O(2^n + n^2)
-O(5 + 3 + 1)
-O(n + n^(1/2) + n^2 + n \* log(n)^10)
+O(n + 10) = O(n)
+O(100 \* n) = O(n)
+O(25) = O(1)
+O(n^2 + n^3) = O(n^3)
+O(n + n + n + n) = O(n)
+O(1000 \* log(n) + n) = O(n)
+O(1000 \* n \* log(n) + n) = O(log(n))
+O(2^n + n^2) = O(2^n)
+O(5 + 3 + 1) = O(1)
+O(n + n^(1/2) + n^2 + n \* log(n)^10) = O(n^2)
 
 ## Step Two: Calculating Time Complexity
 
@@ -25,6 +25,8 @@ function logUpTo(n) {
 }
 ```
 
+- o(n)
+
 ```
 function logAtLeast10(n) {
   for (let i = 1; i <= Math.max(n, 10); i++) {
@@ -33,6 +35,8 @@ function logAtLeast10(n) {
 }
 ```
 
+O(n)
+
 ```
 function logAtMost10(n) {
   for (let i = 1; i <= Math.min(n, 10); i++) {
@@ -40,6 +44,8 @@ function logAtMost10(n) {
   }
 }
 ```
+
+- O(1)
 
 ```
 function onlyElementsAtEvenIndex(array) {
@@ -52,6 +58,8 @@ function onlyElementsAtEvenIndex(array) {
   return newArray;
 }
 ```
+
+- O(n)
 
 ```
 function subtotals(array) {
@@ -66,6 +74,8 @@ function subtotals(array) {
   return subtotalArray;
 }
 ```
+
+- 0(n^2)
 
 ```
 function vowelCount(str) {
@@ -86,19 +96,21 @@ function vowelCount(str) {
 }
 ```
 
+- O(n)
+
 ## Part 3 - short answer
 
 Answer the following questions
 
-True or false: n^2 + n is O(n^2).
-True or false: n^2 \* n is O(n^3).
-True or false: n^2 + n is O(n).
-What’s the time complexity of the .indexOf array method?
-What’s the time complexity of the .includes array method?
-What’s the time complexity of the .forEach array method?
-What’s the time complexity of the .sort array method?
-What’s the time complexity of the .unshift array method?
-What’s the time complexity of the .push array method?
-What’s the time complexity of the .splice array method?
-What’s the time complexity of the .pop array method?
-What’s the time complexity of the Object.keys() function?
+True or false: n^2 + n is O(n^2). - True
+True or false: n^2 \* n is O(n^3). - True
+True or false: n^2 + n is O(n). - False
+What’s the time complexity of the .indexOf array method? - O(n)
+What’s the time complexity of the .includes array method? - O(n)
+What’s the time complexity of the .forEach array method? - O(n)
+**What’s the time complexity of the .sort array method?** - O(n^2)
+What’s the time complexity of the .unshift array method? - O(n)
+What’s the time complexity of the .push array method? - O(1)
+What’s the time complexity of the .splice array method? - O(n)
+What’s the time complexity of the .pop array method? - O(1)
+What’s the time complexity of the Object.keys() function? - O(n)
